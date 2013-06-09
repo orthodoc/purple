@@ -7,5 +7,5 @@ Purple::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
-  resources :patients, only: [:new]
+  resources :patients, only: [:new, :create, :show, :index]
 end

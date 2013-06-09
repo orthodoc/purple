@@ -187,5 +187,5 @@ end
 
 Then /^I should see my name$/ do
   create_user
-  page.should have_content @user[:name]
+  page.has_content? @visitor[:name]
 end

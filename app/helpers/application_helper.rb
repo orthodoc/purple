@@ -12,4 +12,13 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def not_permited_alert
+    flash[:alert] = "You are not permitted to do this!"
+  end
+
+  def not_permitted_action
+    redirect_to root_path
+    not_permited_alert
+  end
+
 end

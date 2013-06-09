@@ -1,0 +1,14 @@
+<%= simple_form_for @patient do |f| %>
+  <p>
+    <%= f.input :name %>
+    <%= f.input :dob, as: :date, start_year: Date.today.year-100, end_year: Date.today.year-12, order: [:month, :year, :day], label: "Date of birth" %>
+    <%= f.input :age %>
+    <%= f.input :gender, collection: ["Male", "Female", "Others"] %>
+    <%= f.input :permanent_address %>
+    <%= f.input :communication_address %>
+    <%= f.input :mobile_number %>
+    <%= f.input :email %>
+
+  </p>
+  <%= f.button :submit, "Submit" %>
+<% end %>
