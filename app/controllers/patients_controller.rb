@@ -26,7 +26,11 @@ class PatientsController < ApplicationController
   end
 
   def index
-    @patients = Patient.all
+    if secretary? || admin?
+      @patients = Patient.all
+    else
+      not_permitted_action
+    end
   end
 
 end

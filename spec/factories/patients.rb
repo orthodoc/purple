@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :patient do
-    sequence(:name) {|n| "Test Patient#{n}"}
+    name "Test Patient"
     #sequence(:dob)  {|n| n + 18.years.ago}
-    sequence(:age)  {|n| n + 18}
+    sequence(:age)  {|n| n + 12}
     gender "Male"
     permanent_address "MyString"
     communication_address "MyString"
